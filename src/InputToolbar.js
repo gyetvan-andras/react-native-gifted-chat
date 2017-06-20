@@ -7,6 +7,7 @@ import {
 import Composer from './Composer';
 import Send from './Send';
 import Actions from './Actions';
+const ReactPropTypes = require('prop-types')
 
 export default class InputToolbar extends React.Component {
   renderActions() {
@@ -88,11 +89,11 @@ InputToolbar.defaultProps = {
 };
 
 InputToolbar.propTypes = {
-  renderAccessory: React.PropTypes.func,
-  renderActions: React.PropTypes.func,
-  renderSend: React.PropTypes.func,
-  renderComposer: React.PropTypes.func,
-  onPressActionButton: React.PropTypes.func,
+  renderAccessory: ReactPropTypes.func,
+  renderActions: ReactPropTypes.func,
+  renderSend: ReactPropTypes.func,
+  renderComposer: ReactPropTypes.func,
+  onPressActionButton: ReactPropTypes.func,
   containerStyle: View.propTypes.style,
   primaryStyle: View.propTypes.style,
   accessoryStyle: View.propTypes.style,

@@ -9,6 +9,7 @@ import Bubble from './Bubble';
 import Day from './Day';
 
 import {isSameUser, isSameDay} from './utils';
+const ReactPropTypes = require('prop-types')
 
 export default class Message extends React.Component {
 
@@ -98,15 +99,15 @@ Message.defaultProps = {
 };
 
 Message.propTypes = {
-  renderAvatar: React.PropTypes.func,
-  renderBubble: React.PropTypes.func,
-  renderDay: React.PropTypes.func,
-  position: React.PropTypes.oneOf(['left', 'right']),
-  currentMessage: React.PropTypes.object,
-  nextMessage: React.PropTypes.object,
-  previousMessage: React.PropTypes.object,
-  user: React.PropTypes.object,
-  containerStyle: React.PropTypes.shape({
+  renderAvatar: ReactPropTypes.func,
+  renderBubble: ReactPropTypes.func,
+  renderDay: ReactPropTypes.func,
+  position: ReactPropTypes.oneOf(['left', 'right']),
+  currentMessage: ReactPropTypes.object,
+  nextMessage: ReactPropTypes.object,
+  previousMessage: ReactPropTypes.object,
+  user: ReactPropTypes.object,
+  containerStyle: ReactPropTypes.shape({
     left: View.propTypes.style,
     right: View.propTypes.style,
   }),

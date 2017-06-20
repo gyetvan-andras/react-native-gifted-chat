@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+const ReactPropTypes = require('prop-types')
 
 export default class LoadEarlier extends React.Component {
   renderLoading() {
@@ -91,9 +92,9 @@ LoadEarlier.defaultProps = {
 };
 
 LoadEarlier.propTypes = {
-  onLoadEarlier: React.PropTypes.func,
-  isLoadingEarlier: React.PropTypes.bool,
-  label: React.PropTypes.string,
+  onLoadEarlier: ReactPropTypes.func,
+  isLoadingEarlier: ReactPropTypes.bool,
+  label: ReactPropTypes.string,
   containerStyle: View.propTypes.style,
   wrapperStyle: View.propTypes.style,
   textStyle: Text.propTypes.style,

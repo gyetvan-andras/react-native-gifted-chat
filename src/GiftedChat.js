@@ -27,6 +27,7 @@ import Send from './Send';
 import Time from './Time';
 import GiftedAvatar from './GiftedAvatar';
 import GiftedChatInteractionManager from './GiftedChatInteractionManager';
+const ReactPropTypes = require('prop-types')
 
 // Min and max heights of ToolbarInput and Composer
 // Needed for Composer auto grow and ScrollView animation
@@ -471,8 +472,8 @@ const styles = StyleSheet.create({
 });
 
 GiftedChat.childContextTypes = {
-  actionSheet: React.PropTypes.func,
-  getLocale: React.PropTypes.func,
+  actionSheet: ReactPropTypes.func,
+  getLocale: ReactPropTypes.func,
 };
 
 GiftedChat.defaultProps = {
@@ -517,36 +518,36 @@ GiftedChat.defaultProps = {
 };
 
 GiftedChat.propTypes = {
-  messages: React.PropTypes.array,
-  onSend: React.PropTypes.func,
-  onInputTextChanged: React.PropTypes.func,
-  loadEarlier: React.PropTypes.bool,
-  onLoadEarlier: React.PropTypes.func,
-  locale: React.PropTypes.string,
-  isAnimated: React.PropTypes.bool,
-  renderAccessory: React.PropTypes.func,
-  renderActions: React.PropTypes.func,
-  renderAvatar: React.PropTypes.func,
-  renderBubble: React.PropTypes.func,
-  renderFooter: React.PropTypes.func,
-  renderChatFooter: React.PropTypes.func,
-  renderMessageText: React.PropTypes.func,
-  renderMessageImage: React.PropTypes.func,
-  renderComposer: React.PropTypes.func,
-  renderCustomView: React.PropTypes.func,
-  renderDay: React.PropTypes.func,
-  renderInputToolbar: React.PropTypes.func,
-  renderLoadEarlier: React.PropTypes.func,
-  renderLoading: React.PropTypes.func,
-  renderMessage: React.PropTypes.func,
-  renderSend: React.PropTypes.func,
-  renderTime: React.PropTypes.func,
-  user: React.PropTypes.object,
-  bottomOffset: React.PropTypes.number,
-  minInputToolbarHeight: React.PropTypes.number,
-  isLoadingEarlier: React.PropTypes.bool,
-  messageIdGenerator: React.PropTypes.func,
-  keyboardShouldPersistTaps: React.PropTypes.oneOf(['always', 'never', 'handled']),
+  messages: ReactPropTypes.array,
+  onSend: ReactPropTypes.func,
+  onInputTextChanged: ReactPropTypes.func,
+  loadEarlier: ReactPropTypes.bool,
+  onLoadEarlier: ReactPropTypes.func,
+  locale: ReactPropTypes.string,
+  isAnimated: ReactPropTypes.bool,
+  renderAccessory: ReactPropTypes.func,
+  renderActions: ReactPropTypes.func,
+  renderAvatar: ReactPropTypes.func,
+  renderBubble: ReactPropTypes.func,
+  renderFooter: ReactPropTypes.func,
+  renderChatFooter: ReactPropTypes.func,
+  renderMessageText: ReactPropTypes.func,
+  renderMessageImage: ReactPropTypes.func,
+  renderComposer: ReactPropTypes.func,
+  renderCustomView: ReactPropTypes.func,
+  renderDay: ReactPropTypes.func,
+  renderInputToolbar: ReactPropTypes.func,
+  renderLoadEarlier: ReactPropTypes.func,
+  renderLoading: ReactPropTypes.func,
+  renderMessage: ReactPropTypes.func,
+  renderSend: ReactPropTypes.func,
+  renderTime: ReactPropTypes.func,
+  user: ReactPropTypes.object,
+  bottomOffset: ReactPropTypes.number,
+  minInputToolbarHeight: ReactPropTypes.number,
+  isLoadingEarlier: ReactPropTypes.bool,
+  messageIdGenerator: ReactPropTypes.func,
+  keyboardShouldPersistTaps: ReactPropTypes.oneOf(['always', 'never', 'handled']),
 };
 
 export {

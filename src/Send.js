@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+const ReactPropTypes = require('prop-types')
 
 export default class Send extends React.Component {
   // shouldComponentUpdate(nextProps, nextState) {
@@ -56,9 +57,9 @@ Send.defaultProps = {
 };
 
 Send.propTypes = {
-  text: React.PropTypes.string,
-  onSend: React.PropTypes.func,
-  label: React.PropTypes.string,
+  text: ReactPropTypes.string,
+  onSend: ReactPropTypes.func,
+  label: ReactPropTypes.string,
   containerStyle: View.propTypes.style,
   textStyle: Text.propTypes.style,
 };

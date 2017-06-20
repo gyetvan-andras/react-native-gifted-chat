@@ -13,6 +13,8 @@ import Time from './Time';
 
 import { isSameUser, isSameDay, warnDeprecated } from './utils';
 
+const ReactPropTypes = require('prop-types')
+
 export default class Bubble extends React.Component {
   constructor(props) {
     super(props);
@@ -196,7 +198,7 @@ const styles = {
 };
 
 Bubble.contextTypes = {
-  actionSheet: React.PropTypes.func,
+  actionSheet: ReactPropTypes.func,
 };
 
 Bubble.defaultProps = {
@@ -226,38 +228,38 @@ Bubble.defaultProps = {
 };
 
 Bubble.propTypes = {
-  touchableProps: React.PropTypes.object,
-  onLongPress: React.PropTypes.func,
-  renderMessageImage: React.PropTypes.func,
-  renderMessageText: React.PropTypes.func,
-  renderCustomView: React.PropTypes.func,
-  renderTime: React.PropTypes.func,
-  position: React.PropTypes.oneOf(['left', 'right']),
-  currentMessage: React.PropTypes.object,
-  nextMessage: React.PropTypes.object,
-  previousMessage: React.PropTypes.object,
-  containerStyle: React.PropTypes.shape({
+  touchableProps: ReactPropTypes.object,
+  onLongPress: ReactPropTypes.func,
+  renderMessageImage: ReactPropTypes.func,
+  renderMessageText: ReactPropTypes.func,
+  renderCustomView: ReactPropTypes.func,
+  renderTime: ReactPropTypes.func,
+  position: ReactPropTypes.oneOf(['left', 'right']),
+  currentMessage: ReactPropTypes.object,
+  nextMessage: ReactPropTypes.object,
+  previousMessage: ReactPropTypes.object,
+  containerStyle: ReactPropTypes.shape({
     left: View.propTypes.style,
     right: View.propTypes.style,
   }),
-  wrapperStyle: React.PropTypes.shape({
+  wrapperStyle: ReactPropTypes.shape({
     left: View.propTypes.style,
     right: View.propTypes.style,
   }),
-  bottomContainerStyle: React.PropTypes.shape({
+  bottomContainerStyle: ReactPropTypes.shape({
     left: View.propTypes.style,
     right: View.propTypes.style,
   }),
   tickStyle: Text.propTypes.style,
-  containerToNextStyle: React.PropTypes.shape({
+  containerToNextStyle: ReactPropTypes.shape({
     left: View.propTypes.style,
     right: View.propTypes.style,
   }),
-  containerToPreviousStyle: React.PropTypes.shape({
+  containerToPreviousStyle: ReactPropTypes.shape({
     left: View.propTypes.style,
     right: View.propTypes.style,
   }),
   //TODO: remove in next major release
-  isSameDay: React.PropTypes.func,
-  isSameUser: React.PropTypes.func,
+  isSameDay: ReactPropTypes.func,
+  isSameUser: ReactPropTypes.func,
 };

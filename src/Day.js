@@ -8,6 +8,7 @@ import {
 import moment from 'moment/min/moment-with-locales.min';
 
 import { isSameDay, isSameUser, warnDeprecated } from './utils';
+const ReactPropTypes = require('prop-types')
 
 export default class Day extends React.Component {
   render() {
@@ -50,7 +51,7 @@ const styles = StyleSheet.create({
 });
 
 Day.contextTypes = {
-  getLocale: React.PropTypes.func,
+  getLocale: ReactPropTypes.func,
 };
 
 Day.defaultProps = {
@@ -68,12 +69,12 @@ Day.defaultProps = {
 };
 
 Day.propTypes = {
-  currentMessage: React.PropTypes.object,
-  previousMessage: React.PropTypes.object,
+  currentMessage: ReactPropTypes.object,
+  previousMessage: ReactPropTypes.object,
   containerStyle: View.propTypes.style,
   wrapperStyle: View.propTypes.style,
   textStyle: Text.propTypes.style,
   //TODO: remove in next major release
-  isSameDay: React.PropTypes.func,
-  isSameUser: React.PropTypes.func,
+  isSameDay: ReactPropTypes.func,
+  isSameUser: ReactPropTypes.func,
 };

@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+const ReactPropTypes = require('prop-types')
 
 export default class Actions extends React.Component {
   constructor(props) {
@@ -86,7 +87,7 @@ const styles = StyleSheet.create({
 });
 
 Actions.contextTypes = {
-  actionSheet: React.PropTypes.func,
+  actionSheet: ReactPropTypes.func,
 };
 
 Actions.defaultProps = {
@@ -99,11 +100,11 @@ Actions.defaultProps = {
 };
 
 Actions.propTypes = {
-  onSend: React.PropTypes.func,
-  options: React.PropTypes.object,
-  optionTintColor: React.PropTypes.string,
-  icon: React.PropTypes.func,
-  onPressActionButton: React.PropTypes.func,
+  onSend: ReactPropTypes.func,
+  options: ReactPropTypes.object,
+  optionTintColor: ReactPropTypes.string,
+  icon: ReactPropTypes.func,
+  onPressActionButton: ReactPropTypes.func,
   containerStyle: View.propTypes.style,
   iconTextStyle: Text.propTypes.style,
 };

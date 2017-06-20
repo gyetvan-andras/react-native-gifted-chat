@@ -6,6 +6,7 @@ import {
 } from 'react-native';
 
 import moment from 'moment/min/moment-with-locales.min';
+const ReactPropTypes = require('prop-types')
 
 export default class Time extends React.Component {
   render() {
@@ -53,7 +54,7 @@ const styles = {
 };
 
 Time.contextTypes = {
-  getLocale: React.PropTypes.func,
+  getLocale: ReactPropTypes.func,
 };
 
 Time.defaultProps = {
@@ -66,13 +67,13 @@ Time.defaultProps = {
 };
 
 Time.propTypes = {
-  position: React.PropTypes.oneOf(['left', 'right']),
-  currentMessage: React.PropTypes.object,
-  containerStyle: React.PropTypes.shape({
+  position: ReactPropTypes.oneOf(['left', 'right']),
+  currentMessage: ReactPropTypes.object,
+  containerStyle: ReactPropTypes.shape({
     left: View.propTypes.style,
     right: View.propTypes.style,
   }),
-  textStyle: React.PropTypes.shape({
+  textStyle: ReactPropTypes.shape({
     left: Text.propTypes.style,
     right: Text.propTypes.style,
   }),

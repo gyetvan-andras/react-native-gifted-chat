@@ -10,6 +10,7 @@ import InvertibleScrollView from 'react-native-invertible-scroll-view';
 import md5 from 'md5';
 import LoadEarlier from './LoadEarlier';
 import Message from './Message';
+const ReactPropTypes = require('prop-types')
 
 export default class MessageContainer extends React.Component {
   constructor(props) {
@@ -169,10 +170,10 @@ MessageContainer.defaultProps = {
 };
 
 MessageContainer.propTypes = {
-  messages: React.PropTypes.array,
-  user: React.PropTypes.object,
-  renderFooter: React.PropTypes.func,
-  renderMessage: React.PropTypes.func,
-  onLoadEarlier: React.PropTypes.func,
-  listViewProps: React.PropTypes.object,
+  messages: ReactPropTypes.array,
+  user: ReactPropTypes.object,
+  renderFooter: ReactPropTypes.func,
+  renderMessage: ReactPropTypes.func,
+  onLoadEarlier: ReactPropTypes.func,
+  listViewProps: ReactPropTypes.object,
 };

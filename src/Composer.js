@@ -4,6 +4,7 @@ import {
   StyleSheet,
   TextInput,
 } from 'react-native';
+const ReactPropTypes = require('prop-types')
 
 export default class Composer extends React.Component {
   onChange(e) {
@@ -80,14 +81,14 @@ Composer.defaultProps = {
 };
 
 Composer.propTypes = {
-  onChange: React.PropTypes.func,
-  composerHeight: React.PropTypes.number,
-  text: React.PropTypes.string,
-  placeholder: React.PropTypes.string,
-  placeholderTextColor: React.PropTypes.string,
-  textInputProps: React.PropTypes.object,
-  onTextChanged: React.PropTypes.func,
-  onInputSizeChanged: React.PropTypes.func,
-  multiline: React.PropTypes.bool,
+  onChange: ReactPropTypes.func,
+  composerHeight: ReactPropTypes.number,
+  text: ReactPropTypes.string,
+  placeholder: ReactPropTypes.string,
+  placeholderTextColor: ReactPropTypes.string,
+  textInputProps: ReactPropTypes.object,
+  onTextChanged: ReactPropTypes.func,
+  onInputSizeChanged: ReactPropTypes.func,
+  multiline: ReactPropTypes.bool,
   textInputStyle: TextInput.propTypes.style,
 };
